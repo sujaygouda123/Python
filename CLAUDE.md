@@ -16,23 +16,28 @@ coding assistant) working in this repository.
   on PATH on this machine — always use `py <file>.py`).
 - **Non-negotiable constraints:** None currently — no latency budget, no
   offline requirement, no compliance boundary.
-- **Project layout:**
+- **Project layout:** Scripts are organized into date-stamped folders
+  (`DD-MM-YY`), one per working session:
   ```
   /
+  ├── README.md
   ├── CLAUDE.md
-  ├── Secrate_number.py               # CLI number-guessing game
-  ├── string_functions_examples.py    # Python string method demos
-  └── String functions/
-      └── String_fun.py               # currently empty
+  ├── 15-07-26/
+  │   └── secret_number.py               # CLI number-guessing game
+  └── 16-07-26/
+      ├── string_functions_examples.py    # Python string method demos
+      ├── Task 2a - loops, conditionals, functions.py
+      └── Task 2b - break, continue, membership.py
   ```
-  There is no `src/`, `tests/`, or `config/` directory yet.
+  There is no `src/`, `tests/`, or `config/` directory. New scripts go in a
+  new `DD-MM-YY/` folder for that session rather than the repo root.
 
 ---
 
 ## 2. Configuration Discipline
 
 - No config files exist. Tunable values (e.g. `MIN_NUMBER`, `MAX_ATTEMPTS` in
-  `Secrate_number.py`) are module-level constants at the top of each script —
+  `secret_number.py`) are module-level constants at the top of each script —
   that is the current convention, not an oversight to "fix."
 - If a script grows enough parameters to justify a config file, ask before
   introducing one.
@@ -53,7 +58,7 @@ coding assistant) working in this repository.
 
 - Scripts have no external boundary today (no network, filesystem, or
   hardware access) — only stdin via `input()`. The pattern in
-  `Secrate_number.py` (catch `ValueError` from `int()`, re-prompt) is the
+  `secret_number.py` (catch `ValueError` from `int()`, re-prompt) is the
   model to follow for new user-input handling.
 - If a script later touches a real boundary (file, network, API), catch that
   boundary's native exception specifically — never a bare `except:`.
@@ -98,7 +103,7 @@ These are absolute unless the user explicitly overrides them in the moment.
   Code style itself should stay consistent with what's already here — type
   hints on function signatures, module-level constants, comments showing
   expected output (see `string_functions_examples.py` and
-  `Secrate_number.py` as reference).
+  `secret_number.py` as reference).
 - **Domain notation:** Not applicable — no specialized domain notation is
   involved.
 - **File size:** Never create a new file exceeding **300 lines**. Split into
