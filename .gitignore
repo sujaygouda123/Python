@@ -3,3 +3,6 @@ __pycache__/
 .venv/
 venv/
 .vscode/
+matplotlib_*.png
+seaborn_*.png
+plotly_*.html
