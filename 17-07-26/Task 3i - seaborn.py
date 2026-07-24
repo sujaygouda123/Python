@@ -62,5 +62,3 @@ sns.histplot(tips_like["total_bill"], kde=True, bins=5)
 plt.title("Total Bill Distribution")
 plt.savefig(os.path.join(OUTPUT_DIR, "seaborn_histplot.png"))
 plt.close()
-
-print("done: 4 PNG files written to", OUTPUT_DIR)

@@ -1,0 +1,9 @@
+name,age,sales,category,a,b
+Alice,25,200,Electronics,10,5
+Bob,,150,Clothing,4,3
+Charlie,35,300,Electronics,7,2
+Diana,28,,Clothing,6,6
+Eve,42,120,Grocery,9,1
+Frank,31,180,Grocery,3,8
+Grace,,90,Clothing,5,5
+Henry,29,250,Electronics,2,4

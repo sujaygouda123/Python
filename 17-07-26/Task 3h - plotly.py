@@ -55,5 +55,3 @@ print("graph_objects figure -> plotly_go.html")
 fig = go.Figure(data=go.Bar(x=["Q1", "Q2", "Q3", "Q4"], y=[10, 25, 18, 30]))
 fig.update_layout(title="Quarterly Sales")
 fig.write_html(os.path.join(OUTPUT_DIR, "plotly_go.html"))
-
-print("done: 5 HTML files written to", OUTPUT_DIR)

@@ -66,4 +66,15 @@ plt.title("Multiple Lines")
 plt.savefig(os.path.join(OUTPUT_DIR, "matplotlib_multiline.png"))
 plt.close()
 
-print("done: 4 PNG files written to", OUTPUT_DIR)
+# ------------------------------------------------------------------
+# 5. Pie chart
+# ------------------------------------------------------------------
+print("pie chart -> matplotlib_pie.png")
+
+cars = ['AUDI', 'BMW', 'FORD','TESLA', 'JAGUAR',]
+data = [23, 10, 35, 15, 12]
+
+plt.pie(data, labels=cars, autopct='%1.1f%%')
+plt.title(" Pie Chart")
+plt.savefig(os.path.join(OUTPUT_DIR, "matplotlib_pie.png"))
+plt.close()
